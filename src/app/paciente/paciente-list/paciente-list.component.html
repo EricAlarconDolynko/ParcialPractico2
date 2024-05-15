@@ -1,0 +1,30 @@
+<h1>Listado de Pacientes</h1>
+<hr />
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="container-fluid">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let paciente of pacientes">
+                            <td (click)="onSelected(paciente)">{{ paciente.nombre }}</td>
+                            <td (click)="onSelected(paciente)">{{ paciente.edad }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div *ngIf="selected">
+                <app-paciente-detail [pacienteDetail]="selectedPaciente"></app-paciente-detail>
+              </div>
+        </div>
+    </div>
+</div>
