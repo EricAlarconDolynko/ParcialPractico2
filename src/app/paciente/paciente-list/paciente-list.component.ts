@@ -21,6 +21,10 @@ export class PacienteListComponent implements OnInit {
     });
   }
 
+  countPacientesMenoresDeEdad(): number {
+    return this.pacientes.filter(paciente => paciente.edad < 18).length;
+  }
+
   onSelected(paciente: PacienteDetail): void{
     this.selected = true;
     this.selectedPaciente = paciente;

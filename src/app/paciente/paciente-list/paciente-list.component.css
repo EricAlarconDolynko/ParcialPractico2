@@ -1,0 +1,18 @@
+.container {
+    background-color: grey;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+.table td {
+    background-color: lightgrey;
+}
